@@ -1,0 +1,12 @@
+graph G {
+  graph [layout=neato, overlap=false, splines=true, outputorder=edgesfirst, bgcolor="white", pad=0.3, labelloc=t, fontsize=20, fontname="Helvetica", label="Question 4: the dual is glued together at the one outside face"];
+  node [shape=circle, fixedsize=true, width=1.0, height=1.0, style=filled, penwidth=2.0, fontname="Helvetica", fontsize=14, pin=true];
+  edge [color="#2563eb", penwidth=2.6];
+
+  o [label="outside\nface", fillcolor="#dbeafe", color="#2563eb", pos="245,260!"];
+  fa [label="face A", fillcolor="#fef3c7", color="#d97706", pos="130,80!"];
+  fb [label="face B", fillcolor="#fef3c7", color="#d97706", pos="360,80!"];
+
+  o -- fa [label="unused edge in A", fontcolor="#2563eb"];
+  o -- fb [label="unused edge in B", fontcolor="#2563eb"];
+}

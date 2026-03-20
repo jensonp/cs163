@@ -1,0 +1,14 @@
+digraph G {
+  graph [bgcolor="white", pad=0.3, labelloc=t, fontsize=20, fontname="Helvetica", label="Question 4: count argument for why the dual subgraph is a tree"];
+  node [shape=plain];
+  t [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+      <TR><TD><B>Step</B></TD><TD><B>Equation</B></TD></TR>
+      <TR><TD>Euler for c = 2</TD><TD>n - m + f = 3</TD></TR>
+      <TR><TD>Primal forest size</TD><TD>|T| = n - 2</TD></TR>
+      <TR><TD>Unused primal edges</TD><TD>m - (n - 2) = m - n + 2</TD></TR>
+      <TR><TD>Replace using Euler</TD><TD>m - n + 2 = f - 1</TD></TR>
+      <TR><TD>Conclusion</TD><TD>The dual subgraph is connected and has exactly f - 1 edges, so it is a tree.</TD></TR>
+    </TABLE>
+  >];
+}

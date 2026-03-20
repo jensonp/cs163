@@ -1,0 +1,24 @@
+digraph G {
+  graph [bgcolor="white", pad=0.3, labelloc=t, fontsize=20, fontname="Helvetica", label="Question 1: region-count logic"];
+  node [shape=plain];
+  t [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8">
+      <TR><TD><B>Vertex</B></TD><TD><B>Coordinates</B></TD><TD><B>Mechanical reading</B></TD><TD><B>Forced outgoing edges</B></TD></TR>
+      <TR>
+        <TD><B>v2</B></TD>
+        <TD>(3,1,1)</TD>
+        <TD ALIGN="LEFT">The red side sees v1 twice; green and blue do not see it.</TD>
+        <TD ALIGN="LEFT">v2 goes directly to Red, Green, Blue.</TD>
+      </TR>
+      <TR>
+        <TD><B>v1</B></TD>
+        <TD>(1,2,2)</TD>
+        <TD ALIGN="LEFT">v2 contributes on the green and blue sides, but not on the red side.</TD>
+        <TD ALIGN="LEFT">v1 goes directly to Green and Blue, and its red parent is v2.</TD>
+      </TR>
+      <TR>
+        <TD COLSPAN="4" ALIGN="LEFT"><B>Conclusion:</B> the internal edge is a red edge directed v1 -&gt; v2, and the only missing primal edge is v1-Red.</TD>
+      </TR>
+    </TABLE>
+  >];
+}

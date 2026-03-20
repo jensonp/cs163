@@ -1,0 +1,13 @@
+graph G {
+  graph [layout=neato, overlap=false, splines=true, outputorder=edgesfirst, bgcolor="white", pad=0.3, labelloc=t, fontsize=20, fontname="Helvetica", label="Question 3: compatibility/conflict graph = K3"];
+  node [shape=circle, fixedsize=true, width=0.95, height=0.95, style=filled, fillcolor="#fee2e2", color="#dc2626", penwidth=2.0, fontname="Helvetica", fontsize=14, pin=true];
+  edge [color="#dc2626", penwidth=2.4];
+
+  f14 [label="F14", pos="210,300!"];
+  f25 [label="F25", pos="90,80!"];
+  f36 [label="F36", pos="330,80!"];
+
+  f14 -- f25;
+  f25 -- f36;
+  f36 -- f14;
+}

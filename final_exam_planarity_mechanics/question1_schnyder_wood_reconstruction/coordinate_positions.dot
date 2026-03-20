@@ -1,0 +1,16 @@
+graph G {
+  graph [layout=neato, overlap=false, splines=true, outputorder=edgesfirst, bgcolor="white", pad=0.3, labelloc=t, fontsize=20, fontname="Helvetica", label="Question 1: coordinates inside the outer root triangle"];
+  node [shape=circle, fixedsize=true, width=1.05, height=1.05, style=filled, fontname="Helvetica", fontsize=15, penwidth=2.1, pin=true];
+  edge [color="#94a3b8", penwidth=2.0];
+
+  R [label="Red", fillcolor="#fee2e2", color="#dc2626", pos="210,330!"];
+  G [label="Green", fillcolor="#dcfce7", color="#16a34a", pos="55,55!"];
+  B [label="Blue", fillcolor="#dbeafe", color="#2563eb", pos="365,55!"];
+
+  v1 [label="v1\n(1,2,2)", fillcolor="#f8fafc", color="#475569", pos="210,155!"];
+  v2 [label="v2\n(3,1,1)", fillcolor="#f8fafc", color="#475569", pos="210,220!"];
+
+  R -- G;
+  G -- B;
+  B -- R;
+}

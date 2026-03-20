@@ -1,0 +1,21 @@
+graph G {
+  graph [layout=neato, overlap=false, splines=true, outputorder=edgesfirst, bgcolor="white", pad=0.3, labelloc=t, fontsize=20, fontname="Helvetica", label="Question 2: small equality-case example (cube graph)"];
+  node [shape=circle, fixedsize=true, width=0.55, height=0.55, style=filled, fillcolor="#f8fafc", color="#475569", penwidth=1.8, fontname="Helvetica", fontsize=12, pin=true];
+  edge [color="#0f172a", penwidth=2.0];
+
+  a [pos="40,40!"];
+  b [pos="160,40!"];
+  c [pos="160,160!"];
+  d [pos="40,160!"];
+  e [pos="80,80!"];
+  f [pos="120,80!"];
+  g [pos="120,120!"];
+  h [pos="80,120!"];
+
+  a -- b -- c -- d -- a;
+  e -- f -- g -- h -- e;
+  a -- e;
+  b -- f;
+  c -- g;
+  d -- h;
+}

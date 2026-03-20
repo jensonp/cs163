@@ -1,0 +1,15 @@
+digraph G {
+  graph [bgcolor="white", rankdir=TB, nodesep=0.45, ranksep=0.5, pad=0.3, labelloc=t, fontsize=20, fontname="Helvetica", label="Question 2: deriving the bipartite planar bound"];
+  node [shape=box, style="rounded,filled", fillcolor="#f8fafc", color="#475569", fontname="Helvetica", fontsize=15, margin="0.18,0.12"];
+  edge [color="#64748b", penwidth=2.0, arrowsize=0.8];
+
+  a [label="Bipartite => no odd cycles =>\nevery face degree is at least 4"];
+  b [label="Face handshaking:\nsum deg(face) = 2E"];
+  c [label="Therefore 2E >= 4F,\nso F <= E/2"];
+  d [label="Euler with V = 100:\n100 - E + F = 2"];
+  e [label="Substitute F <= E/2:\n100 - E + E/2 >= 2"];
+  f [label="So E <= 196"];
+  g [label="Then F = 2 - 100 + 196 = 98"];
+
+  a -> b -> c -> d -> e -> f -> g;
+}

@@ -1,0 +1,21 @@
+graph G {
+  graph [layout=neato, overlap=false, splines=true, outputorder=edgesfirst, bgcolor="white", pad=0.3, labelloc=t, fontsize=20, fontname="Helvetica", label="Question 4: disconnected primal graph with one tree per component"];
+  node [shape=circle, fixedsize=true, width=0.62, height=0.62, style=filled, fillcolor="#f8fafc", color="#475569", penwidth=1.8, fontname="Helvetica", fontsize=12, pin=true];
+  edge [penwidth=2.4];
+
+  a1 [label="a1", pos="60,200!"];
+  a2 [label="a2", pos="170,200!"];
+  a3 [label="a3", pos="115,100!"];
+
+  b1 [label="b1", pos="320,200!"];
+  b2 [label="b2", pos="430,200!"];
+  b3 [label="b3", pos="375,100!"];
+
+  a1 -- a2 [color="#0f172a"];
+  a2 -- a3 [color="#0f172a"];
+  a3 -- a1 [color="#dc2626", style=dashed, penwidth=2.0];
+
+  b1 -- b2 [color="#0f172a"];
+  b2 -- b3 [color="#0f172a"];
+  b3 -- b1 [color="#dc2626", style=dashed, penwidth=2.0];
+}

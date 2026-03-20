@@ -1,0 +1,13 @@
+digraph G {
+  graph [bgcolor="white", pad=0.3, labelloc=t, fontsize=20, fontname="Helvetica", label="Question 2: summary"];
+  node [shape=plain];
+  t [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+      <TR><TD><B>Quantity</B></TD><TD><B>Value</B></TD><TD><B>Reason</B></TD></TR>
+      <TR><TD>V</TD><TD>100</TD><TD>Given</TD></TR>
+      <TR><TD>E_max</TD><TD>196</TD><TD>2E &gt;= 4F and Euler</TD></TR>
+      <TR><TD>F_max</TD><TD>98</TD><TD>F = 2 - V + E</TD></TR>
+      <TR><TD>Face degree at equality</TD><TD>4</TD><TD>Average face degree is exactly 4, so every face hits the minimum</TD></TR>
+    </TABLE>
+  >];
+}

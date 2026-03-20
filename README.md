@@ -77,3 +77,7 @@ Each problem folder contains a `README.md` with a solution walkthrough and a fun
   - Four custom final-exam-style questions on Lectures 9a, 9b, and 9c
   - Includes question text, worked explanations, and Graphviz visuals
   - Includes a full multi-image Lecture 9b Hungarian-algorithm trace under Question 3
+
+- `final_exam_planarity_mechanics/`
+  - Four custom final-exam-style questions on Schnyder woods, bipartite planar bounds, flap testing, and disconnected duals
+  - Includes question text, worked explanations, and Graphviz visuals

@@ -1,0 +1,25 @@
+digraph G {
+  graph [layout=neato, overlap=false, splines=true, outputorder=edgesfirst, bgcolor="white", pad=0.3, labelloc=t, fontsize=20, fontname="Helvetica", label="Question 1: reconstructed Schnyder wood"];
+  node [shape=circle, fixedsize=true, width=1.05, height=1.05, style=filled, fontname="Helvetica", fontsize=15, penwidth=2.1, pin=true];
+  edge [fontname="Helvetica", fontsize=13, arrowsize=0.9, penwidth=2.6];
+
+  R [label="Red", fillcolor="#fee2e2", color="#dc2626", pos="210,330!"];
+  G [label="Green", fillcolor="#dcfce7", color="#16a34a", pos="55,55!"];
+  B [label="Blue", fillcolor="#dbeafe", color="#2563eb", pos="365,55!"];
+
+  v1 [label="v1\n(1,2,2)", fillcolor="#f8fafc", color="#475569", pos="210,155!"];
+  v2 [label="v2\n(3,1,1)", fillcolor="#f8fafc", color="#475569", pos="210,220!"];
+
+  R -> G [dir=none, color="#94a3b8", penwidth=2.0];
+  G -> B [dir=none, color="#94a3b8", penwidth=2.0];
+  B -> R [dir=none, color="#94a3b8", penwidth=2.0];
+
+  v2 -> R [color="#dc2626", fontcolor="#dc2626", label="red"];
+  v1 -> v2 [color="#dc2626", fontcolor="#dc2626", label="red"];
+
+  v2 -> G [color="#16a34a", fontcolor="#16a34a", label="green"];
+  v1 -> G [color="#16a34a", fontcolor="#16a34a", label="green"];
+
+  v2 -> B [color="#2563eb", fontcolor="#2563eb", label="blue"];
+  v1 -> B [color="#2563eb", fontcolor="#2563eb", label="blue"];
+}
