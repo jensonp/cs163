@@ -1,0 +1,47 @@
+graph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=true,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Lesson 3: a separating triangle does not automatically kill Hamiltonicity\nThis same graph has separator abc and Hamiltonian cycle d-a-e-b-c-d."
+  ];
+
+  node [
+    shape=circle,
+    fixedsize=true,
+    width=0.78,
+    height=0.78,
+    style=filled,
+    fontname="Helvetica",
+    fontsize=18,
+    penwidth=2.0,
+    pin=true
+  ];
+
+  edge [penwidth=2.0, color="#cbd5e1"];
+
+  a [label="a", fillcolor="#fed7aa", color="#ea580c", pos="0,0!"];
+  b [label="b", fillcolor="#fed7aa", color="#ea580c", pos="140,220!"];
+  c [label="c", fillcolor="#fed7aa", color="#ea580c", pos="280,0!"];
+  d [label="d", fillcolor="#dbeafe", color="#2563eb", pos="140,85!"];
+  e [label="e", fillcolor="#dcfce7", color="#16a34a", pos="140,340!"];
+
+  a -- b;
+  b -- c [color="#16a34a", penwidth=4.2];
+  c -- a;
+  d -- a [color="#16a34a", penwidth=4.2];
+  d -- b;
+  d -- c [color="#16a34a", penwidth=4.2];
+  e -- a [color="#16a34a", penwidth=4.2];
+  e -- b [color="#16a34a", penwidth=4.2];
+  e -- c;
+
+  sep_note [shape=plain, width=0, height=0, margin=0, style="", label="Orange vertices form the separating triangle.", pos="140,-78!"];
+  ham_note [shape=plain, width=0, height=0, margin=0, style="", label="Green edges form a Hamiltonian cycle through all 5 vertices.", pos="140,-108!"];
+}

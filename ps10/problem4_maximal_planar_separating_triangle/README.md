@@ -6,6 +6,8 @@ The counterexample in this folder is:
 
 ![Separating triangle counterexample](separating_triangle_counterexample.png)
 
+For a longer conceptual note on separating triangles, connectivity, and the Hamiltonian-cycle caveat, see [EXPLANATION.md](EXPLANATION.md).
+
 ## Solution
 
 No. A maximal planar graph can contain a triangle that is **not** a face.

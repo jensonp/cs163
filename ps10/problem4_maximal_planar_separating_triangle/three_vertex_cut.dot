@@ -1,0 +1,48 @@
+graph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=true,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Lesson 2: a separating triangle gives a 3-vertex cut\nRemoving a, b, and c disconnects d from e, so the graph is not 4-connected."
+  ];
+
+  node [
+    shape=circle,
+    fixedsize=true,
+    width=0.78,
+    height=0.78,
+    style=filled,
+    fontname="Helvetica",
+    fontsize=18,
+    penwidth=2.0,
+    pin=true
+  ];
+
+  edge [penwidth=2.2, color="#94a3b8"];
+
+  a [label="a", fillcolor="#fecaca", color="#dc2626", pos="0,0!"];
+  b [label="b", fillcolor="#fecaca", color="#dc2626", pos="140,220!"];
+  c [label="c", fillcolor="#fecaca", color="#dc2626", pos="280,0!"];
+  d [label="d", fillcolor="#dbeafe", color="#2563eb", pos="140,85!"];
+  e [label="e", fillcolor="#dcfce7", color="#16a34a", pos="140,340!"];
+
+  a -- b [color="#dc2626", penwidth=3.6];
+  b -- c [color="#dc2626", penwidth=3.6];
+  c -- a [color="#dc2626", penwidth=3.6];
+
+  d -- a;
+  d -- b;
+  d -- c;
+  e -- a;
+  e -- b;
+  e -- c;
+
+  cut_note [shape=plain, width=0, height=0, margin=0, style="", label="Delete {a,b,c} and only d and e remain, with no edge between them.", pos="140,-78!"];
+  conn_note [shape=plain, width=0, height=0, margin=0, style="", label="Maximal planar graphs are at least 3-connected, so here connectivity is exactly 3.", pos="140,-108!"];
+}

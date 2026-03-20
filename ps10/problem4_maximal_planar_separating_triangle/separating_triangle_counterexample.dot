@@ -1,0 +1,49 @@
+graph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=true,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="PS10 Problem 4: triangular bipyramid counterexample\nAll faces are triangles, but triangle abc is not a face because it separates d from e."
+  ];
+
+  node [
+    shape=circle,
+    fixedsize=true,
+    width=0.78,
+    height=0.78,
+    style=filled,
+    fontname="Helvetica",
+    fontsize=18,
+    penwidth=2.0,
+    pin=true
+  ];
+
+  edge [penwidth=2.2, color="#475569"];
+
+  a [label="a", fillcolor="#fed7aa", color="#ea580c", pos="0,0!"];
+  b [label="b", fillcolor="#fed7aa", color="#ea580c", pos="140,220!"];
+  c [label="c", fillcolor="#fed7aa", color="#ea580c", pos="280,0!"];
+  d [label="d", fillcolor="#dbeafe", color="#2563eb", pos="140,85!"];
+  e [label="e", fillcolor="#dcfce7", color="#16a34a", pos="140,340!"];
+
+  a -- b [color="#f59e0b", penwidth=3.4];
+  b -- c [color="#f59e0b", penwidth=3.4];
+  c -- a [color="#f59e0b", penwidth=3.4];
+
+  d -- a;
+  d -- b;
+  d -- c;
+  e -- a;
+  e -- b;
+  e -- c;
+
+  inside_note [shape=plain, width=0, height=0, margin=0, style="", label="inside of abc", pos="140,130!"];
+  outside_note [shape=plain, width=0, height=0, margin=0, style="", label="outside of abc", pos="140,402!"];
+  faces_note [shape=plain, width=0, height=0, margin=0, style="", label="Faces: abd, bcd, cad, abe, bce, cae", pos="140,-78!"];
+}
