@@ -1,0 +1,20 @@
+digraph G {
+  graph [layout=neato, overlap=false, splines=true, outputorder=edgesfirst, bgcolor="white", pad=0.35, labelloc=t, fontsize=20, fontname="Helvetica", label="Step 2: rerouting path is s -> r3 -> b4 -> r4 -> b3"];
+  node [shape=circle, fixedsize=true, width=0.82, height=0.82, style=filled, fontname="Helvetica", fontsize=17, penwidth=2.0, pin=true];
+  edge [arrowsize=0.8, fontname="Helvetica", fontsize=15];
+
+  s [label="s", fillcolor="#fef3c7", color="#d97706", pos="0,120!"];
+  r1 [label="r1\n3", fillcolor="#dbeafe", color="#2563eb", pos="170,300!"];
+  r2 [label="r2\n0", fillcolor="#dbeafe", color="#2563eb", pos="170,210!"];
+  r3 [label="r3\n0", fillcolor="#dbeafe", color="#2563eb", pos="170,120!"];
+  r4 [label="r4\n0", fillcolor="#dbeafe", color="#2563eb", pos="170,30!"];
+
+  b1 [label="b1\n3", fillcolor="#ffedd5", color="#ea580c", pos="390,300!"];
+  b2 [label="b2\n3", fillcolor="#ffedd5", color="#ea580c", pos="390,210!"];
+  b3 [label="b3\n0", fillcolor="#ffedd5", color="#ea580c", pos="390,120!"];
+  b4 [label="b4\n0", fillcolor="#ffedd5", color="#ea580c", pos="390,30!"];
+
+  s -> r1 [label="0", color="#cbd5e1", fontcolor="#0f172a", penwidth=2.0, style="dashed"];  s -> r2 [label="0", color="#cbd5e1", fontcolor="#0f172a", penwidth=2.0, style="dashed"];  s -> r3 [label="0", color="#16a34a", fontcolor="#16a34a", penwidth=3.6, style="dashed"];  s -> r4 [label="0", color="#cbd5e1", fontcolor="#0f172a", penwidth=2.0, style="dashed"];
+  r3 -> b4 [label="0", color="#16a34a", fontcolor="#16a34a", penwidth=3.6, style="solid"];  r4 -> b3 [label="0", color="#16a34a", fontcolor="#16a34a", penwidth=3.6, style="solid"];
+  b1 -> r1 [label="0", color="#334155", fontcolor="#334155", penwidth=3.0, style="solid"];  b4 -> r4 [label="0", color="#16a34a", fontcolor="#16a34a", penwidth=3.6, style="solid"];
+}

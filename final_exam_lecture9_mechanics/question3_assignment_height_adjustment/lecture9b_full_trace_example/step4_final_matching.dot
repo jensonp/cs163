@@ -1,0 +1,13 @@
+digraph G {
+  graph [bgcolor="white", pad=0.35, labelloc=t, fontsize=20, fontname="Helvetica", label="Final perfect matching from the lecture example"];
+  node [shape=plain];
+  t [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="16">
+      <TR><TD></TD><TD><B>b1</B></TD><TD><B>b2</B></TD><TD><B>b3</B></TD><TD><B>b4</B></TD></TR>
+      <TR><TD><B>r1</B></TD><TD><B>X</B></TD><TD></TD><TD></TD><TD></TD></TR>
+      <TR><TD><B>r2</B></TD><TD></TD><TD><B>X</B></TD><TD></TD><TD></TD></TR>
+      <TR><TD><B>r3</B></TD><TD></TD><TD></TD><TD></TD><TD><B>X</B></TD></TR>
+      <TR><TD><B>r4</B></TD><TD></TD><TD></TD><TD><B>X</B></TD><TD></TD></TR>
+    </TABLE>
+  >];
+}

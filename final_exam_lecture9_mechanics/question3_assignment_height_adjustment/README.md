@@ -101,6 +101,8 @@ Summary table:
 
 ![Height update summary](height_update.png)
 
+For the complete `4 x 4` lecture example with all four augmentations, see [lecture9b_full_trace_example/README.md](lecture9b_full_trace_example/README.md).
+
 ## Final answer
 
 1. Shortest alternating path: `s -> A -> Y`

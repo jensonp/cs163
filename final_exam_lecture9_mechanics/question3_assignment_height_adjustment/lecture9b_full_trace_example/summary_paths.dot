@@ -1,0 +1,13 @@
+digraph G {
+  graph [bgcolor="white", pad=0.35, labelloc=t, fontsize=20, fontname="Helvetica", label="Lecture 9b Hungarian trace summary"];
+  node [shape=plain];
+  t [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8">
+      <TR><TD><B>Step</B></TD><TD><B>Shortest alternating path</B></TD><TD><B>Distance</B></TD><TD><B>Matching after augment</B></TD></TR>
+      <TR><TD>1</TD><TD>s -&gt; r4 -&gt; b4</TD><TD>1</TD><TD>{r4-b4}</TD></TR>
+      <TR><TD>2</TD><TD>s -&gt; r1 -&gt; b1</TD><TD>0</TD><TD>{r1-b1, r4-b4}</TD></TR>
+      <TR><TD>3</TD><TD>s -&gt; r3 -&gt; b4 -&gt; r4 -&gt; b3</TD><TD>0</TD><TD>{r1-b1, r3-b4, r4-b3}</TD></TR>
+      <TR><TD>4</TD><TD>s -&gt; r2 -&gt; b2</TD><TD>0</TD><TD>{r1-b1, r2-b2, r3-b4, r4-b3}</TD></TR>
+    </TABLE>
+  >];
+}

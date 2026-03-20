@@ -76,3 +76,4 @@ Each problem folder contains a `README.md` with a solution walkthrough and a fun
 - `final_exam_lecture9_mechanics/`
   - Four custom final-exam-style questions on Lectures 9a, 9b, and 9c
   - Includes question text, worked explanations, and Graphviz visuals
+  - Includes a full multi-image Lecture 9b Hungarian-algorithm trace under Question 3
