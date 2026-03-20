@@ -1,6 +1,7 @@
 # CS163 Graphviz Exports
 
 This directory is organized by practice set and problem number.
+Each problem folder contains a `README.md` with a solution walkthrough and a fundamentals section.
 
 ## PS8
 

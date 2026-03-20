@@ -4,7 +4,9 @@ Prove that the pictured graph is not planar by finding a subdivision of `K5` or 
 
 This folder uses a `K3,3` subdivision.
 
-## What the problem is really asking
+## Solution
+
+### What the problem is really asking
 
 You do **not** have to redraw the whole graph without crossings.
 
@@ -173,7 +175,7 @@ In the remaining graph, the nine left-right connections are:
 
 The internal vertices on these paths are `IL`, `CM`, `IR`, `BL`, `BR`, and `RL`, and they are all distinct. Therefore the remaining graph is a subdivision of `K3,3`. Since `K3,3` is nonplanar, the original graph is nonplanar as well.
 
-## The hidden facts you are supposed to know
+## Fundamentals
 
 - **Deleting edges is allowed.**
   You are trying to find a nonplanar **subgraph**, so unused edges may be discarded.

@@ -1,6 +1,17 @@
 # PS9 Problem 3
 
-## 3.1 Counterexample
+This folder covers both parts of the problem:
+
+- a 4-cycle counterexample showing greedy can do as badly as `1/2 + eps`
+- the charging argument showing greedy is always at least a `1/2`-approximation
+
+![Counterexample](counterexample_cycle.png)
+
+![Charging argument](half_approximation_charging.png)
+
+## Solution
+
+### Part 3.1: counterexample
 
 Use a 4-cycle with edge weights
 
@@ -21,7 +32,7 @@ But the optimal matching takes the left and right edges, for total weight
 
 So the greedy ratio is `1/2 + eps`.
 
-## 3.2 Why greedy is always at least a 1/2-approximation
+### Part 3.2: why greedy is always a `1/2`-approximation
 
 Let `G` be the greedy matching and `O` be an optimal matching.
 
@@ -36,3 +47,13 @@ Therefore, if we charge each optimal edge to a greedy edge that is at least as h
 which rearranges to
 
 `w(G) >= (1/2) w(O)`.
+
+## Fundamentals
+
+- **Greedy weighted matching.** Repeatedly choose the heaviest remaining edge and delete all edges touching it.
+
+- **Approximation ratio.** Saying greedy is a `1/2`-approximation means its weight is always at least half of the optimum.
+
+- **Why the 4-cycle works as a counterexample.** The slightly heavier top edge tricks greedy into using up both of its endpoints, so the algorithm misses the two medium edges whose combined weight is better.
+
+- **Charging proof.** Each optimal edge is assigned to a greedy edge that blocked it or selected it, and each greedy edge can receive charge from at most two optimal edges because it has only two endpoints.

@@ -1,6 +1,16 @@
 # PS9 Problem 4
 
-## 4.1 The second-choice matching is unstable
+This folder contains the preference table, the unstable second-choice matching, and the unique stable matching.
+
+![Preference table](preferences_table.png)
+
+![Second-choice matching](second_choice_unstable_matching.png)
+
+![Unique stable matching](stable_matching_only.png)
+
+## Solution
+
+### Part 4.1: the second-choice matching is unstable
 
 If every participant gets their second choice, the matching is
 
@@ -11,7 +21,7 @@ If every participant gets their second choice, the matching is
 
 This is not stable because `B` prefers `W` to `X`, and `W` prefers `B` to `A`. So `(B, W)` is a blocking pair.
 
-## 4.2 No stable matching is also minimum-weight
+### Part 4.2: no stable matching is also minimum-weight
 
 Give each participant a cost equal to the rank of their assigned partner. The total cost of a matching is the sum over all eight participants.
 
@@ -55,3 +65,13 @@ But the minimum-weight perfect matching overall is the second-choice matching
 with total score `16`.
 
 So there is **no** stable matching that is also a minimum-weight matching.
+
+## Fundamentals
+
+- **Stable matching.** A matching is stable if there is no unmatched pair who both prefer each other over their assigned partners.
+
+- **Blocking pair.** The pair `(B, W)` blocks the second-choice matching because both sides would rather switch to each other.
+
+- **Mutual first choices are forced.** If two participants rank each other first, every stable matching must match them together.
+
+- **Stable versus globally optimal.** A stable matching need not minimize the total sum of preference ranks. Stability and minimum total weight are different goals.
