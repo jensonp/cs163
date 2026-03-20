@@ -1,0 +1,36 @@
+digraph G {
+  graph [
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Why these three specific edges may be deleted"
+  ];
+
+  node [shape=plain];
+
+  table [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8">
+      <TR>
+        <TD><B>Deleted edge</B></TD>
+        <TD><B>Why it is safe to remove</B></TD>
+      </TR>
+      <TR>
+        <TD>CM-RL</TD>
+        <TD>No chosen K3,3 path needs to go directly from CM to RL.</TD>
+      </TR>
+      <TR>
+        <TD>IL-BL</TD>
+        <TD>The UL-to-RM path uses UL-IL-RM, not UL-IL-BL-...</TD>
+      </TR>
+      <TR>
+        <TD>IR-BR</TD>
+        <TD>The UR-to-LM path uses UR-IR-LM, not UR-IR-BR-...</TD>
+      </TR>
+      <TR>
+        <TD COLSPAN="2">Rule: once the 9 subdivision paths are chosen, every edge not on those paths is optional and may be discarded.</TD>
+      </TR>
+    </TABLE>
+  >];
+}

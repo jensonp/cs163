@@ -46,6 +46,10 @@ Why is that allowed?
 
 Because a subdivision only needs to appear as a **subgraph** of the original graph. A subgraph is obtained by deleting edges and vertices.
 
+Here is the rule in picture form:
+
+![Keep versus delete rule](problem2_keep_delete_rule.png)
+
 Delete these three edges:
 
 - `CM -- RL`
@@ -55,6 +59,24 @@ Delete these three edges:
 Those are the dashed red edges below:
 
 ![Delete three edges](problem2_mark_removed_edges.png)
+
+### How do you know these three edges are safe to delete?
+
+Because the proof only needs **one** chosen subdivision of `K3,3`.
+
+So once you decide which 9 left-right paths will represent the 9 edges of `K3,3`, you keep the edges on those paths and throw away everything else.
+
+These three edges are safe to discard because none of the chosen paths uses them:
+
+![Deleted-edge checklist](problem2_deleted_edges_checklist.png)
+
+It is often easier to think of this as a **keep list** rather than a delete list:
+
+- first choose the 9 paths you want
+- then keep every edge on those paths
+- then delete every other edge
+
+That is exactly how you extract the helpful subgraph from the larger graph.
 
 ## Step 3: What remains is the candidate `K3,3` subdivision
 
@@ -133,6 +155,10 @@ That is impossible.
 
 Therefore, the original graph is **not planar**.
 
+Here is the logical contradiction in one picture:
+
+![Subgraph contradiction](problem2_subgraph_contradiction.png)
+
 ## Optional Step 7: Why the final picture can be "shrunk" to `K3,3`
 
 This last image is only for intuition:
@@ -179,6 +205,9 @@ The internal vertices on these paths are `IL`, `CM`, `IR`, `BL`, `BR`, and `RL`,
 
 - **Deleting edges is allowed.**
   You are trying to find a nonplanar **subgraph**, so unused edges may be discarded.
+
+- **You are not required to keep all original edges.**
+  The proof only needs one carefully chosen subgraph that already contains the `K3,3` subdivision.
 
 - **A subdivision replaces edges by internally disjoint paths.**
   The branch vertices play the role of the original vertices of `K3,3`.

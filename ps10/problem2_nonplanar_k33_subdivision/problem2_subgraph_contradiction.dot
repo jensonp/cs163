@@ -1,0 +1,32 @@
+digraph G {
+  graph [
+    rankdir=TB,
+    bgcolor="white",
+    pad=0.35,
+    nodesep=0.35,
+    ranksep=0.5,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Why deleting edges is logically allowed"
+  ];
+
+  node [
+    shape=box,
+    style="rounded,filled",
+    fontname="Helvetica",
+    fontsize=17,
+    penwidth=1.8,
+    margin="0.18,0.10"
+  ];
+
+  edge [color="#475569", penwidth=1.8, arrowsize=0.8];
+
+  g [label="Start with the original graph G", fillcolor="#dbeafe", color="#2563eb"];
+  h [label="Delete unused edges to get a subgraph H", fillcolor="#fee2e2", color="#dc2626"];
+  ifplanar [label="If G were planar,\nthen every subgraph of G would also be planar", fillcolor="#f8fafc", color="#475569"];
+  k33 [label="But H is a subdivision of K3,3,\nso H is nonplanar", fillcolor="#fef3c7", color="#d97706"];
+  contra [label="Contradiction\nTherefore G is nonplanar", fillcolor="#dcfce7", color="#16a34a"];
+
+  g -> h -> ifplanar -> k33 -> contra;
+}

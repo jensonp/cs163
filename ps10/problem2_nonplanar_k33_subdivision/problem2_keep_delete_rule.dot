@@ -1,0 +1,32 @@
+digraph G {
+  graph [
+    rankdir=TB,
+    bgcolor="white",
+    pad=0.35,
+    nodesep=0.35,
+    ranksep=0.5,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="How edge deletion works in a subdivision proof"
+  ];
+
+  node [
+    shape=box,
+    style="rounded,filled",
+    fontname="Helvetica",
+    fontsize=17,
+    penwidth=1.8,
+    margin="0.18,0.10"
+  ];
+
+  edge [color="#475569", penwidth=1.8, arrowsize=0.8];
+
+  goal [label="Goal:\nfind a subdivision of K3,3 inside the original graph G", fillcolor="#dbeafe", color="#2563eb"];
+  pick [label="Pick the 6 branch vertices\nand the 9 left-right paths you want to use", fillcolor="#f8fafc", color="#475569"];
+  keep [label="Keep every edge that appears on one of those 9 paths", fillcolor="#dcfce7", color="#16a34a"];
+  delete [label="Delete every edge that is not used by those chosen paths", fillcolor="#fee2e2", color="#dc2626"];
+  result [label="The result is a subgraph H of G\nIf H is a subdivision of K3,3, that is enough", fillcolor="#fef3c7", color="#d97706"];
+
+  goal -> pick -> keep -> delete -> result;
+}
