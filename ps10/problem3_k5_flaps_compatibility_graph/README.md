@@ -16,6 +16,8 @@ The three visuals in this folder are:
 
 For a smaller warm-up example using a square with two diagonals, see [simple_square_compatibility_example/README.md](simple_square_compatibility_example/README.md).
 
+For a fuller divide-and-conquer example of the flap test, see [flap_test_divide_and_conquer_example/README.md](flap_test_divide_and_conquer_example/README.md).
+
 ## Solution
 
 Label the cycle vertices clockwise as

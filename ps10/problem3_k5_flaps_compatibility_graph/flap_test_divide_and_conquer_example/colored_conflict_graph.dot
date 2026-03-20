@@ -1,0 +1,35 @@
+graph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=false,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Step 3 continued: 2-color the conflict graph\nGreen = inside, purple = outside. The graph is bipartite, so the test passes."
+  ];
+
+  node [
+    shape=circle,
+    fixedsize=true,
+    width=1.0,
+    height=1.0,
+    style=filled,
+    penwidth=2.0,
+    fontname="Helvetica",
+    fontsize=18,
+    pin=true
+  ];
+
+  edge [penwidth=2.5, color="#334155"];
+
+  F1 [label="F1\ninside", fillcolor="#dcfce7", color="#16a34a", pos="0,0!"];
+  F2 [label="F2\noutside", fillcolor="#ede9fe", color="#7c3aed", pos="170,130!"];
+  F3 [label="F3\ninside", fillcolor="#dcfce7", color="#16a34a", pos="340,0!"];
+
+  F1 -- F2;
+  F2 -- F3;
+}

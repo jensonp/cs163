@@ -1,0 +1,33 @@
+digraph G {
+  graph [
+    rankdir=TB,
+    bgcolor="white",
+    pad=0.35,
+    nodesep=0.35,
+    ranksep=0.5,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Where the divide-and-conquer recursion goes in this example"
+  ];
+
+  node [
+    shape=box,
+    style="rounded,filled",
+    fontname="Helvetica",
+    fontsize=17,
+    penwidth=1.8,
+    margin="0.18,0.10"
+  ];
+
+  edge [color="#475569", penwidth=1.8, arrowsize=0.8];
+
+  a [label="Choose cycle C and identify flaps F1, F2, F3", fillcolor="#dbeafe", color="#2563eb"];
+  b [label="Compatibility graph is the path F1-F2-F3", fillcolor="#fef3c7", color="#d97706"];
+  c [label="2-color it:\nF1 and F3 inside, F2 outside", fillcolor="#dcfce7", color="#16a34a"];
+  d [label="Recursive subproblems:\nC union F1, C union F2, C union F3", fillcolor="#f8fafc", color="#475569"];
+  e [label="Each subproblem has only one flap\nSo recursion stops immediately", fillcolor="#fee2e2", color="#dc2626"];
+  f [label="Glue the three embeddings back together", fillcolor="#ede9fe", color="#7c3aed"];
+
+  a -> b -> c -> d -> e -> f;
+}

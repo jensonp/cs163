@@ -1,0 +1,55 @@
+graph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=true,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.45,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Flap test example: start with a cycle C and three flaps\nCycle C = v1 v2 v3 v4 v5 v6 v1. Flaps: F1 = v1-x-v3, F2 = v2-y-v5, F3 = v4-z-v6."
+  ];
+
+  node [
+    shape=circle,
+    fixedsize=true,
+    width=0.68,
+    height=0.68,
+    style=filled,
+    fontname="Helvetica",
+    fontsize=16,
+    penwidth=1.8,
+    pin=true
+  ];
+
+  edge [penwidth=2.2, color="#64748b", fontname="Helvetica", fontsize=15];
+
+  v1 [label="v1", fillcolor="#fed7aa", color="#ea580c", pos="0,180!"];
+  v2 [label="v2", fillcolor="#fed7aa", color="#ea580c", pos="120,280!"];
+  v3 [label="v3", fillcolor="#fed7aa", color="#ea580c", pos="280,280!"];
+  v4 [label="v4", fillcolor="#fed7aa", color="#ea580c", pos="400,180!"];
+  v5 [label="v5", fillcolor="#fed7aa", color="#ea580c", pos="280,20!"];
+  v6 [label="v6", fillcolor="#fed7aa", color="#ea580c", pos="120,20!"];
+
+  x [label="x", fillcolor="#fee2e2", color="#dc2626", pos="120,200!"];
+  y [label="y", fillcolor="#dbeafe", color="#2563eb", pos="200,150!"];
+  z [label="z", fillcolor="#dcfce7", color="#16a34a", pos="280,140!"];
+
+  v1 -- v2 [color="#f59e0b", penwidth=3.4];
+  v2 -- v3 [color="#f59e0b", penwidth=3.4];
+  v3 -- v4 [color="#f59e0b", penwidth=3.4];
+  v4 -- v5 [color="#f59e0b", penwidth=3.4];
+  v5 -- v6 [color="#f59e0b", penwidth=3.4];
+  v6 -- v1 [color="#f59e0b", penwidth=3.4];
+
+  v1 -- x [color="#dc2626", penwidth=3.0];
+  x -- v3 [color="#dc2626", penwidth=3.0];
+
+  v2 -- y [color="#2563eb", penwidth=3.0];
+  y -- v5 [color="#2563eb", penwidth=3.0];
+
+  v4 -- z [color="#16a34a", penwidth=3.0];
+  z -- v6 [color="#16a34a", penwidth=3.0];
+}

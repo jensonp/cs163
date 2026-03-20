@@ -1,0 +1,49 @@
+digraph G {
+  graph [
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Step 2: determine which flaps conflict by attachment order on the cycle"
+  ];
+
+  node [shape=plain];
+
+  table [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8">
+      <TR>
+        <TD><B>Flap</B></TD>
+        <TD><B>Attachment set</B></TD>
+        <TD><B>Conflict test</B></TD>
+      </TR>
+      <TR>
+        <TD>F1</TD>
+        <TD>{v1, v3}</TD>
+        <TD ROWSPAN="2">F1 conflicts with F2 because the cycle order is v1, v2, v3, v5.</TD>
+      </TR>
+      <TR>
+        <TD>F2</TD>
+        <TD>{v2, v5}</TD>
+      </TR>
+      <TR>
+        <TD>F2</TD>
+        <TD>{v2, v5}</TD>
+        <TD ROWSPAN="2">F2 conflicts with F3 because the cycle order is v2, v4, v5, v6.</TD>
+      </TR>
+      <TR>
+        <TD>F3</TD>
+        <TD>{v4, v6}</TD>
+      </TR>
+      <TR>
+        <TD>F1</TD>
+        <TD>{v1, v3}</TD>
+        <TD ROWSPAN="2">F1 does not conflict with F3 because the endpoints do not alternate.</TD>
+      </TR>
+      <TR>
+        <TD>F3</TD>
+        <TD>{v4, v6}</TD>
+      </TR>
+    </TABLE>
+  >];
+}

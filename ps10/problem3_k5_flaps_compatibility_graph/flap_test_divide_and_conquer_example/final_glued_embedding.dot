@@ -1,0 +1,58 @@
+graph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=true,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.50,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Step 4: recurse and glue\nF1 and F3 are placed inside the cycle; F2 is placed outside. Each flap subproblem is a base case."
+  ];
+
+  node [
+    shape=circle,
+    fixedsize=true,
+    width=0.68,
+    height=0.68,
+    style=filled,
+    fontname="Helvetica",
+    fontsize=16,
+    penwidth=1.8,
+    pin=true
+  ];
+
+  edge [penwidth=2.2, color="#64748b", fontname="Helvetica", fontsize=15];
+
+  v1 [label="v1", fillcolor="#fed7aa", color="#ea580c", pos="0,180!"];
+  v2 [label="v2", fillcolor="#fed7aa", color="#ea580c", pos="120,280!"];
+  v3 [label="v3", fillcolor="#fed7aa", color="#ea580c", pos="280,280!"];
+  v4 [label="v4", fillcolor="#fed7aa", color="#ea580c", pos="400,180!"];
+  v5 [label="v5", fillcolor="#fed7aa", color="#ea580c", pos="280,20!"];
+  v6 [label="v6", fillcolor="#fed7aa", color="#ea580c", pos="120,20!"];
+
+  x [label="x", fillcolor="#dcfce7", color="#16a34a", pos="115,225!"];
+  z [label="z", fillcolor="#dcfce7", color="#16a34a", pos="245,130!"];
+  y [label="y", fillcolor="#ede9fe", color="#7c3aed", pos="520,150!"];
+
+  v1 -- v2 [color="#f59e0b", penwidth=3.4];
+  v2 -- v3 [color="#f59e0b", penwidth=3.4];
+  v3 -- v4 [color="#f59e0b", penwidth=3.4];
+  v4 -- v5 [color="#f59e0b", penwidth=3.4];
+  v5 -- v6 [color="#f59e0b", penwidth=3.4];
+  v6 -- v1 [color="#f59e0b", penwidth=3.4];
+
+  v1 -- x [color="#16a34a", penwidth=3.2];
+  x -- v3 [color="#16a34a", penwidth=3.2];
+
+  v4 -- z [color="#16a34a", penwidth=3.2];
+  z -- v6 [color="#16a34a", penwidth=3.2];
+
+  v2 -- y [color="#7c3aed", penwidth=3.2];
+  y -- v5 [color="#7c3aed", penwidth=3.2];
+
+  note1 [shape=plain, width=0, height=0, margin=0, style="", label="Inside flaps: F1 and F3", pos="160,-70!"];
+  note2 [shape=plain, width=0, height=0, margin=0, style="", label="Outside flap: F2", pos="480,-70!"];
+}
