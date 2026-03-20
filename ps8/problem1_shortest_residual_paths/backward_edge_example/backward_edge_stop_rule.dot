@@ -1,0 +1,47 @@
+digraph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=true,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Step 4: residual graph after the correction\nStop now, because there is no residual path from s to t."
+  ];
+
+  node [
+    shape=circle,
+    fixedsize=true,
+    width=0.76,
+    height=0.76,
+    style=filled,
+    fillcolor="#f8fafc",
+    color="#0f172a",
+    penwidth=2.0,
+    fontname="Helvetica",
+    fontsize=18,
+    pin=true
+  ];
+
+  edge [
+    color="#94a3b8",
+    penwidth=2.0,
+    arrowsize=0.9,
+    fontname="Helvetica",
+    fontsize=16
+  ];
+
+  s [label="s", pos="0,110!"];
+  a [label="a", pos="170,220!"];
+  b [label="b", pos="170,0!"];
+  t [label="t", pos="340,110!"];
+
+  a -> s [label="1"];
+  b -> s [label="1"];
+  a -> b [label="1"];
+  t -> a [label="1"];
+  t -> b [label="1"];
+}

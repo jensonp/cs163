@@ -103,6 +103,47 @@ It went backward because:
 - the first augmenting path used the middle edge `a -> b` in a way that blocked a better arrangement
 - the residual graph let the algorithm undo that local mistake and reroute the flow
 
+## The missing decision rule: when do you use a backward edge, and when do you stop?
+
+This is the crucial algorithm rule:
+
+1. Build the residual graph.
+2. If there is an `s-t` path in the residual graph, augment along one such path.
+3. If that residual path includes a backward edge, use it.
+4. If there is **no** residual `s-t` path, stop.
+
+So:
+
+- you do **not** use a backward edge just because one exists somewhere
+- you use it only when it lies on a complete residual path from `s` to `t`
+
+In this example, after the bad first path:
+
+- there **is** a residual path `s -> b -> a -> t`
+- that path uses the backward edge `b -> a`
+
+So the algorithm continues and augments.
+
+After the correction, the residual graph looks like this:
+
+![Stop rule residual graph](backward_edge_stop_rule.png)
+
+Now notice the important fact:
+
+- `s` has no outgoing residual edge at all
+
+So there is no residual path from `s` to `t`.
+
+That is exactly when the algorithm stops.
+
+The stopping test is **not**:
+
+- "Are there any backward edges left?"
+
+The stopping test is:
+
+- "Is there any augmenting path from `s` to `t` in the residual graph?"
+
 ## What this example teaches
 
 - **Backward residual edges are essential.**
@@ -116,3 +157,6 @@ It went backward because:
 
 - **Going backward is really rerouting.**
   The algorithm is not losing flow value. It is rearranging the existing flow to make room for more.
+
+- **Stopping depends on `s-t` reachability.**
+  You stop only when the residual graph has no path from `s` to `t`, even if some isolated backward edges still exist elsewhere.
