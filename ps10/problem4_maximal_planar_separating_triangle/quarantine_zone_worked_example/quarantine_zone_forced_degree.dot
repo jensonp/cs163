@@ -1,0 +1,53 @@
+graph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=true,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Part 2: D is forced to have degree 3\nBecause D is the only inside vertex, maximal planarity forces edges D-A, D-B, and D-C."
+  ];
+
+  node [
+    shape=circle,
+    fixedsize=true,
+    width=0.78,
+    height=0.78,
+    style=filled,
+    fontname="Helvetica",
+    fontsize=18,
+    penwidth=2.0,
+    pin=true
+  ];
+
+  edge [penwidth=1.9, color="#cbd5e1"];
+
+  A [label="A", fillcolor="#fed7aa", color="#ea580c", pos="0,0!"];
+  B [label="B", fillcolor="#fed7aa", color="#ea580c", pos="160,220!"];
+  C [label="C", fillcolor="#fed7aa", color="#ea580c", pos="320,0!"];
+  D [label="D", fillcolor="#dbeafe", color="#2563eb", pos="160,95!"];
+  E [label="E", fillcolor="#dcfce7", color="#16a34a", pos="170,380!"];
+  F [label="F", fillcolor="#dcfce7", color="#16a34a", pos="15,255!"];
+
+  A -- B;
+  B -- C;
+  C -- A;
+
+  D -- A [color="#2563eb", penwidth=4.0];
+  D -- B [color="#2563eb", penwidth=4.0];
+  D -- C [color="#2563eb", penwidth=4.0];
+
+  E -- A;
+  E -- B;
+  E -- C;
+  F -- A;
+  F -- B;
+  F -- E;
+
+  note1 [shape=plain, label="D cannot connect to E or F without crossing the separator ABC.", pos="160,-78!"];
+  note2 [shape=plain, label="With only one inside vertex, the inside region must split into faces ABD, BCD, and CAD.", pos="160,-108!"];
+}

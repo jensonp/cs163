@@ -8,6 +8,8 @@ The counterexample in this folder is:
 
 For a longer conceptual note on separating triangles, connectivity, and the Hamiltonian-cycle caveat, see [EXPLANATION.md](EXPLANATION.md).
 
+For a worked custom example using a six-vertex "quarantine zone" setup, see [quarantine_zone_worked_example/README.md](quarantine_zone_worked_example/README.md).
+
 ## Solution
 
 No. A maximal planar graph can contain a triangle that is **not** a face.

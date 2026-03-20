@@ -1,0 +1,55 @@
+graph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=true,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Part 3 is false as stated: the ant can succeed\nThis valid example has Hamiltonian path D-C-E-F-B-A."
+  ];
+
+  node [
+    shape=circle,
+    fixedsize=true,
+    width=0.78,
+    height=0.78,
+    style=filled,
+    fontname="Helvetica",
+    fontsize=18,
+    penwidth=2.0,
+    pin=true
+  ];
+
+  edge [penwidth=2.0, color="#cbd5e1"];
+
+  A [label="A\n6", fillcolor="#fed7aa", color="#ea580c", pos="0,0!"];
+  B [label="B\n5", fillcolor="#fed7aa", color="#ea580c", pos="160,220!"];
+  C [label="C\n2", fillcolor="#fed7aa", color="#ea580c", pos="320,0!"];
+  D [label="D\n1", fillcolor="#dbeafe", color="#2563eb", pos="160,95!"];
+  E [label="E\n3", fillcolor="#dcfce7", color="#16a34a", pos="170,380!"];
+  F [label="F\n4", fillcolor="#dcfce7", color="#16a34a", pos="15,255!"];
+
+  A -- B [color="#cbd5e1"];
+  B -- C [color="#cbd5e1"];
+  C -- A [color="#cbd5e1"];
+
+  D -- A [color="#cbd5e1"];
+  D -- B [color="#cbd5e1"];
+  D -- C [color="#16a34a", penwidth=4.2];
+
+  E -- A [color="#cbd5e1"];
+  E -- B [color="#cbd5e1"];
+  E -- C [color="#16a34a", penwidth=4.2];
+
+  F -- A [color="#cbd5e1"];
+  F -- B [color="#16a34a", penwidth=4.2];
+  F -- E [color="#16a34a", penwidth=4.2];
+
+  A -- B [color="#16a34a", penwidth=4.2];
+
+  note1 [shape=plain, label="Hamiltonian path: D -> C -> E -> F -> B -> A", pos="160,-78!"];
+}

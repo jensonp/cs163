@@ -1,0 +1,22 @@
+graph G {
+  graph [
+    layout=dot,
+    rankdir=TB,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Part 1: counting edges and faces in any maximal planar graph with n = 6"
+  ];
+
+  node [shape=plain, fontname="Helvetica", fontsize=18];
+
+  top [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+      <TR><TD><B>Known formula</B></TD><TD><B>Substitute n = 6</B></TD><TD><B>Answer</B></TD></TR>
+      <TR><TD>m = 3n - 6</TD><TD>m = 3(6) - 6</TD><TD>m = 12 edges</TD></TR>
+      <TR><TD>f = 2n - 4</TD><TD>f = 2(6) - 4</TD><TD>f = 8 faces</TD></TR>
+    </TABLE>
+  >];
+}

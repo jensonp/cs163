@@ -1,0 +1,54 @@
+graph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=true,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Quarantine Zone setup: one concrete maximal planar graph satisfying the stated rules\nABC is a separating triangle, D is inside, and E,F are outside."
+  ];
+
+  node [
+    shape=circle,
+    fixedsize=true,
+    width=0.78,
+    height=0.78,
+    style=filled,
+    fontname="Helvetica",
+    fontsize=18,
+    penwidth=2.0,
+    pin=true
+  ];
+
+  edge [penwidth=2.2, color="#64748b"];
+
+  A [label="A", fillcolor="#fed7aa", color="#ea580c", pos="0,0!"];
+  B [label="B", fillcolor="#fed7aa", color="#ea580c", pos="160,220!"];
+  C [label="C", fillcolor="#fed7aa", color="#ea580c", pos="320,0!"];
+  D [label="D", fillcolor="#dbeafe", color="#2563eb", pos="160,95!"];
+  E [label="E", fillcolor="#dcfce7", color="#16a34a", pos="170,380!"];
+  F [label="F", fillcolor="#dcfce7", color="#16a34a", pos="15,255!"];
+
+  A -- B [color="#f59e0b", penwidth=3.8];
+  B -- C [color="#f59e0b", penwidth=3.8];
+  C -- A [color="#f59e0b", penwidth=3.8];
+
+  D -- A;
+  D -- B;
+  D -- C;
+
+  E -- A;
+  E -- B;
+  E -- C;
+
+  F -- A;
+  F -- B;
+  F -- E;
+
+  inside_note [shape=plain, label="inside of triangle ABC", pos="160,130!"];
+  outside_note [shape=plain, label="outside of triangle ABC", pos="175,448!"];
+}

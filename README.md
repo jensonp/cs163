@@ -64,5 +64,6 @@ Each problem folder contains a `README.md` with a solution walkthrough and a fun
   - Problem 4
   - Counterexample showing a maximal planar graph can contain a triangle that is not a face
   - Includes an extended explanation of separating triangles, connectivity, and the Hamiltonian caveat
+  - Includes a supplementary six-vertex "Quarantine Zone" worked example
 
 - Source: `https://ics.uci.edu/~eppstein/163/w26-ps10.html`
