@@ -69,3 +69,9 @@ Each problem folder contains a `README.md` with a solution walkthrough and a fun
   - Includes a supplementary six-vertex "Quarantine Zone" worked example
 
 - Source: `https://ics.uci.edu/~eppstein/163/w26-ps10.html`
+
+## Supplementary Sets
+
+- `final_exam_lecture9_mechanics/`
+  - Four custom final-exam-style questions on Lectures 9a, 9b, and 9c
+  - Includes question text, worked explanations, and Graphviz visuals

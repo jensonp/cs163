@@ -1,0 +1,31 @@
+digraph G {
+  graph [
+    rankdir=LR,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Question 1: one n=3 Gale-Shapley worst-case instance\nThis instance forces 7 proposals, which is the maximum possible."
+  ];
+
+  node [shape=plain];
+
+  proposers [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8">
+      <TR><TD COLSPAN="2"><B>Proposer preferences</B></TD></TR>
+      <TR><TD>P1</TD><TD>R1, R2, R3</TD></TR>
+      <TR><TD>P2</TD><TD>R1, R2, R3</TD></TR>
+      <TR><TD>P3</TD><TD>R2, R1, R3</TD></TR>
+    </TABLE>
+  >];
+
+  reviewers [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8">
+      <TR><TD COLSPAN="2"><B>Reviewer preferences</B></TD></TR>
+      <TR><TD>R1</TD><TD>P3, P1, P2</TD></TR>
+      <TR><TD>R2</TD><TD>P1, P2, P3</TD></TR>
+      <TR><TD>R3</TD><TD>P1, P2, P3</TD></TR>
+    </TABLE>
+  >];
+}

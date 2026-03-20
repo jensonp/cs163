@@ -1,0 +1,50 @@
+graph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=true,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Question 4: acceptable pairs only\nS1 can only be matched to H3; H1 and H2 are missing from S1's list."
+  ];
+
+  node [
+    shape=circle,
+    fixedsize=true,
+    width=0.82,
+    height=0.82,
+    style=filled,
+    fontname="Helvetica",
+    fontsize=17,
+    penwidth=2.0,
+    pin=true
+  ];
+
+  edge [penwidth=2.0, color="#94a3b8"];
+
+  S1 [label="S1", fillcolor="#dbeafe", color="#2563eb", pos="0,300!"];
+  S2 [label="S2", fillcolor="#dbeafe", color="#2563eb", pos="0,200!"];
+  S3 [label="S3", fillcolor="#dbeafe", color="#2563eb", pos="0,100!"];
+  S4 [label="S4", fillcolor="#dbeafe", color="#2563eb", pos="0,0!"];
+
+  H1 [label="H1", fillcolor="#ffedd5", color="#ea580c", pos="280,250!"];
+  H2 [label="H2", fillcolor="#ffedd5", color="#ea580c", pos="280,150!"];
+  H3 [label="H3", fillcolor="#ffedd5", color="#ea580c", pos="280,50!"];
+
+  S1 -- H3 [color="#16a34a", penwidth=3.4];
+  S2 -- H1 [style=dashed];
+  S2 -- H2 [style=dashed];
+  S2 -- H3 [style=dashed];
+  S3 -- H1 [style=dashed];
+  S3 -- H2 [style=dashed];
+  S3 -- H3 [style=dashed];
+  S4 -- H1 [style=dashed];
+  S4 -- H2 [style=dashed];
+  S4 -- H3 [style=dashed];
+
+  note [shape=plain, label="Dashed edges mean the remaining acceptable pairs may be chosen however you like.", pos="140,-78!"];
+}

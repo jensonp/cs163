@@ -1,0 +1,48 @@
+graph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=false,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Question 2: a connected 2-regular bipartite graph is one even cycle\nThe 200-vertex graph is C200; this smaller picture is the same structure."
+  ];
+
+  node [
+    shape=circle,
+    fixedsize=true,
+    width=0.62,
+    height=0.62,
+    style=filled,
+    fontname="Helvetica",
+    fontsize=14,
+    penwidth=1.8,
+    pin=true
+  ];
+
+  edge [color="#94a3b8", penwidth=2.0];
+
+  L1 [label="L1", fillcolor="#dbeafe", color="#2563eb", pos="0,180!"];
+  R1 [label="R1", fillcolor="#ffedd5", color="#ea580c", pos="110,260!"];
+  L2 [label="L2", fillcolor="#dbeafe", color="#2563eb", pos="240,260!"];
+  R2 [label="R2", fillcolor="#ffedd5", color="#ea580c", pos="350,180!"];
+  L3 [label="L3", fillcolor="#dbeafe", color="#2563eb", pos="350,40!"];
+  R3 [label="R3", fillcolor="#ffedd5", color="#ea580c", pos="240,-40!"];
+  L4 [label="L4", fillcolor="#dbeafe", color="#2563eb", pos="110,-40!"];
+  R4 [label="R4", fillcolor="#ffedd5", color="#ea580c", pos="0,40!"];
+
+  L1 -- R1 [color="#16a34a", penwidth=3.4];
+  R1 -- L2;
+  L2 -- R2 [color="#16a34a", penwidth=3.4];
+  R2 -- L3;
+  L3 -- R3 [color="#16a34a", penwidth=3.4];
+  R3 -- L4;
+  L4 -- R4 [color="#16a34a", penwidth=3.4];
+  R4 -- L1;
+
+  note1 [shape=plain, label="Green edges: one perfect matching", pos="175,-115!"];
+}

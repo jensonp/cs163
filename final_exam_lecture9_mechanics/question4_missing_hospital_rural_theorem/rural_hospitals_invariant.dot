@@ -1,0 +1,32 @@
+digraph G {
+  graph [
+    rankdir=TB,
+    bgcolor="white",
+    pad=0.35,
+    nodesep=0.35,
+    ranksep=0.5,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Question 4: the Rural Hospitals invariant"
+  ];
+
+  node [
+    shape=box,
+    style="rounded,filled",
+    fontname="Helvetica",
+    fontsize=17,
+    penwidth=1.8,
+    margin="0.18,0.10"
+  ];
+
+  edge [color="#475569", penwidth=1.8, arrowsize=0.8];
+
+  a [label="Suppose S1 is matched to H3 in one stable matching", fillcolor="#dbeafe", color="#2563eb"];
+  b [label="Rural Hospitals Theorem:\nthe set of unmatched students is the same in every stable matching", fillcolor="#fef3c7", color="#d97706"];
+  c [label="Therefore S1 must be matched in every stable matching", fillcolor="#dcfce7", color="#16a34a"];
+  d [label="So S1 cannot be unmatched in the hospital-optimal stable matching", fillcolor="#fee2e2", color="#dc2626"];
+  e [label="Answer: No", fillcolor="#ede9fe", color="#7c3aed"];
+
+  a -> b -> c -> d -> e;
+}

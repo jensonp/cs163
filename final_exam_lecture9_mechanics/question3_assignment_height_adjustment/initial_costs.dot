@@ -1,0 +1,42 @@
+digraph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=true,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Question 3: initial weighted bipartite graph\nAll heights start at 0 and the matching is empty."
+  ];
+
+  node [
+    shape=circle,
+    fixedsize=true,
+    width=0.8,
+    height=0.8,
+    style=filled,
+    fontname="Helvetica",
+    fontsize=18,
+    penwidth=2.0,
+    pin=true
+  ];
+
+  edge [penwidth=2.0, color="#475569", fontname="Helvetica", fontsize=16, arrowsize=0.8];
+
+  s [label="s", fillcolor="#fef3c7", color="#d97706", pos="0,120!"];
+  A [label="A\nh=0", fillcolor="#dbeafe", color="#2563eb", pos="150,220!"];
+  B [label="B\nh=0", fillcolor="#dbeafe", color="#2563eb", pos="150,20!"];
+  X [label="X\nh=0", fillcolor="#ffedd5", color="#ea580c", pos="350,220!"];
+  Y [label="Y\nh=0", fillcolor="#ffedd5", color="#ea580c", pos="350,20!"];
+
+  s -> A [label="0", style=dashed];
+  s -> B [label="0", style=dashed];
+
+  A -> X [label="5"];
+  A -> Y [label="2"];
+  B -> X [label="6"];
+  B -> Y [label="4"];
+}

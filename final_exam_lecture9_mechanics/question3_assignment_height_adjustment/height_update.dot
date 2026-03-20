@@ -1,0 +1,26 @@
+digraph G {
+  graph [
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Question 3: height update and augmentation result"
+  ];
+
+  node [shape=plain];
+
+  info [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8">
+      <TR><TD><B>Item</B></TD><TD><B>Value after one iteration</B></TD></TR>
+      <TR><TD>Shortest augmenting path</TD><TD>s -&gt; A -&gt; Y</TD></TR>
+      <TR><TD>Adjustment distance d</TD><TD>2</TD></TR>
+      <TR><TD>New h(A)</TD><TD>0 - dist(A) = 0</TD></TR>
+      <TR><TD>New h(B)</TD><TD>0 - dist(B) = 0</TD></TR>
+      <TR><TD>New h(X)</TD><TD>0 + dist(X) = 5</TD></TR>
+      <TR><TD>New h(Y)</TD><TD>0 + dist(Y) = 2</TD></TR>
+      <TR><TD>Matching after augment</TD><TD>{(A, Y)}</TD></TR>
+      <TR><TD>New adjusted weights</TD><TD>AX = 0, AY = 0, BX = 1, BY = 2</TD></TR>
+    </TABLE>
+  >];
+}

@@ -1,0 +1,32 @@
+digraph G {
+  graph [
+    rankdir=TB,
+    bgcolor="white",
+    pad=0.35,
+    nodesep=0.35,
+    ranksep=0.5,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Question 2: the König-theorem chain of reasoning"
+  ];
+
+  node [
+    shape=box,
+    style="rounded,filled",
+    fontname="Helvetica",
+    fontsize=17,
+    penwidth=1.8,
+    margin="0.18,0.10"
+  ];
+
+  edge [color="#475569", penwidth=1.8, arrowsize=0.8];
+
+  a [label="Connected + every vertex has degree 2", fillcolor="#dbeafe", color="#2563eb"];
+  b [label="Therefore the graph is one cycle", fillcolor="#f8fafc", color="#475569"];
+  c [label="Bipartite cycles are even\nSo the graph is C200", fillcolor="#fef3c7", color="#d97706"];
+  d [label="An even cycle has a perfect matching\nSo M = 100", fillcolor="#dcfce7", color="#16a34a"];
+  e [label="König: M + I = n = 200\nTherefore I = 200 - 100 = 100", fillcolor="#fee2e2", color="#dc2626"];
+
+  a -> b -> c -> d -> e;
+}
