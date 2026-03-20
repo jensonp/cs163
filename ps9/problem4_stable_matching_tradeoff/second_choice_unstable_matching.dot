@@ -1,0 +1,33 @@
+graph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=false,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="PS9 Problem 4.1: everyone gets second choice, but the matching is unstable\nMatching: A-W, B-X, C-Y, D-Z. Blocking pair: B-W."
+  ];
+
+  node [shape=circle, fixedsize=true, width=0.72, height=0.72, style=filled, fontname="Helvetica", fontsize=18, penwidth=1.8, pin=true];
+  edge [fontname="Helvetica", fontsize=16];
+
+  A [label="A", fillcolor="#dbeafe", color="#2563eb", pos="0,240!"];
+  B [label="B", fillcolor="#dbeafe", color="#2563eb", pos="0,160!"];
+  C [label="C", fillcolor="#dbeafe", color="#2563eb", pos="0,80!"];
+  D [label="D", fillcolor="#dbeafe", color="#2563eb", pos="0,0!"];
+
+  W [label="W", fillcolor="#ffedd5", color="#ea580c", pos="300,240!"];
+  X [label="X", fillcolor="#ffedd5", color="#ea580c", pos="300,160!"];
+  Y [label="Y", fillcolor="#ffedd5", color="#ea580c", pos="300,80!"];
+  Z [label="Z", fillcolor="#ffedd5", color="#ea580c", pos="300,0!"];
+
+  A -- W [color="#2563eb", penwidth=3.0, fontcolor="#2563eb", label="(2,2)"];
+  B -- X [color="#2563eb", penwidth=3.0, fontcolor="#2563eb", label="(2,2)"];
+  C -- Y [color="#2563eb", penwidth=3.0, fontcolor="#2563eb", label="(2,2)"];
+  D -- Z [color="#2563eb", penwidth=3.0, fontcolor="#2563eb", label="(2,2)"];
+  B -- W [color="#dc2626", penwidth=3.0, style=dashed, fontcolor="#dc2626", label="blocking pair"];
+}

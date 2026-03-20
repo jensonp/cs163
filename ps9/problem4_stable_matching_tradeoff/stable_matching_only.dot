@@ -1,0 +1,34 @@
+graph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=false,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="PS9 Problem 4.2: the unique stable matching\nB-W and C-Z are forced because they are mutual first choices."
+  ];
+
+  node [shape=circle, fixedsize=true, width=0.7, height=0.7, style=filled, fontname="Helvetica", fontsize=18, penwidth=1.8, pin=true];
+  edge [fontname="Helvetica", fontsize=16];
+
+  A [label="A", fillcolor="#dbeafe", color="#2563eb", pos="0,220!"];
+  B [label="B", fillcolor="#dbeafe", color="#2563eb", pos="0,140!"];
+  C [label="C", fillcolor="#dbeafe", color="#2563eb", pos="0,60!"];
+  D [label="D", fillcolor="#dbeafe", color="#2563eb", pos="0,-20!"];
+  W [label="W", fillcolor="#ffedd5", color="#ea580c", pos="300,220!"];
+  X [label="X", fillcolor="#ffedd5", color="#ea580c", pos="300,140!"];
+  Y [label="Y", fillcolor="#ffedd5", color="#ea580c", pos="300,60!"];
+  Z [label="Z", fillcolor="#ffedd5", color="#ea580c", pos="300,-20!"];
+
+  B -- W [color="#16a34a", penwidth=3.2];
+  C -- Z [color="#16a34a", penwidth=3.2];
+  A -- X [color="#2563eb", penwidth=3.0];
+  D -- Y [color="#2563eb", penwidth=3.0];
+  stable_note1 [shape=plain, width=0, height=0, margin=0, style="", label="Forced pairs: B-W and C-Z", pos="150,285!"];
+  stable_note2 [shape=plain, width=0, height=0, margin=0, style="", label="Pair costs: B-W (1,1), C-Z (1,1), A-X (3,3), D-Y (4,4)", pos="150,-85!"];
+  stable_score [shape=plain, width=0, height=0, margin=0, style="", label="Total score = 18", pos="150,-110!"];
+}

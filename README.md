@@ -29,6 +29,19 @@ This directory is organized by practice set and problem number.
   - Cube graph to flow-network reduction for bipartite matching
   - Includes the full network and one example integer maximum flow/perfect matching
 
+- `ps9/problem2_matching_independent_set_pairs/`
+  - Problem 2
+  - Feasible `(M, I)` pairs for bipartite graphs with matching number `M` and independent set size `I`
+  - Includes a construction example and an explanation of why the possible pairs are exactly `0 <= M <= I`
+
+- `ps9/problem3_greedy_weighted_matching/`
+  - Problem 3
+  - 4-cycle counterexample for greedy weighted matching and a visual proof of the `1/2` approximation guarantee
+
+- `ps9/problem4_stable_matching_tradeoff/`
+  - Problem 4
+  - Stable matching instance with the second-choice blocking pair and the stable-vs-minimum-weight comparison
+
 - Source: `https://ics.uci.edu/~eppstein/163/w26-ps9.html`
 
 ## PS10

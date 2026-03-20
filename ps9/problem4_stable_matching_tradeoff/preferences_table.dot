@@ -1,0 +1,24 @@
+digraph G {
+  graph [
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="PS9 Problem 4 preference table"
+  ];
+  node [shape=plain];
+  prefs [label=<
+    <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="8">
+      <TR><TD><B>Participant</B></TD><TD><B>Preference order</B></TD></TR>
+      <TR><TD>A</TD><TD>Z, W, X, Y</TD></TR>
+      <TR><TD>B</TD><TD>W, X, Y, Z</TD></TR>
+      <TR><TD>C</TD><TD>Z, Y, W, X</TD></TR>
+      <TR><TD>D</TD><TD>W, Z, X, Y</TD></TR>
+      <TR><TD>W</TD><TD>B, A, C, D</TD></TR>
+      <TR><TD>X</TD><TD>C, B, A, D</TD></TR>
+      <TR><TD>Y</TD><TD>B, C, A, D</TD></TR>
+      <TR><TD>Z</TD><TD>C, D, A, B</TD></TR>
+    </TABLE>
+  >];
+}

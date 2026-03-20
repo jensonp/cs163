@@ -1,0 +1,31 @@
+graph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=false,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="PS9 Problem 3.2: why greedy is always a 1/2-approximation\nEach optimal edge is either chosen by greedy or blocked by a heavier greedy edge. A greedy edge can block at most two optimal edges."
+  ];
+
+  node [shape=circle, fixedsize=true, width=0.72, height=0.72, style=filled, fillcolor="#f8fafc", color="#0f172a", penwidth=1.8, fontname="Helvetica", fontsize=18, pin=true];
+  edge [fontname="Helvetica", fontsize=16];
+
+  x [label="x", pos="0,0!"];
+  u [label="u", pos="200,0!"];
+  v [label="v", pos="450,0!"];
+  y [label="y", pos="650,0!"];
+
+  x -- u [color="#2563eb", penwidth=3.0];
+  u -- v [color="#dc2626", penwidth=3.4];
+  v -- y [color="#2563eb", penwidth=3.0];
+
+  o1 [shape=plain, width=0, height=0, margin=0, style="", fontcolor="#2563eb", label="optimal edge o1", pos="100,55!"];
+  g1 [shape=plain, width=0, height=0, margin=0, style="", fontcolor="#dc2626", label="greedy edge g", pos="325,55!"];
+  o2 [shape=plain, width=0, height=0, margin=0, style="", fontcolor="#2563eb", label="optimal edge o2", pos="550,55!"];
+  note2 [shape=plain, width=0, height=0, margin=0, style="", label="Charge each optimal edge to a greedy edge of at least the same weight. Since each greedy edge has two endpoints, it gets charged at most twice.", pos="325,-85!"];
+}
