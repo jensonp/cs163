@@ -14,6 +14,8 @@ The three visuals in this folder are:
 
 ![Flap graph](problem3_flap_graph.png)
 
+For a smaller warm-up example using a square with two diagonals, see [simple_square_compatibility_example/README.md](simple_square_compatibility_example/README.md).
+
 ## Solution
 
 Label the cycle vertices clockwise as

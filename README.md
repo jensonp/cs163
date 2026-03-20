@@ -59,6 +59,7 @@ Each problem folder contains a `README.md` with a solution walkthrough and a fun
 - `ps10/problem3_k5_flaps_compatibility_graph/`
   - Problem 3
   - Pentagon drawing of `K5`, flap alternation example, and flap compatibility/conflict graph
+  - Includes a tiny square-with-two-diagonals compatibility-graph warm-up
 
 - `ps10/problem4_maximal_planar_separating_triangle/`
   - Problem 4

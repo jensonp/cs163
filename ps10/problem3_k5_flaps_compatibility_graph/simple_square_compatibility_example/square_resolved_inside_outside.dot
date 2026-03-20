@@ -1,0 +1,52 @@
+graph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=true,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.45,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Translate the coloring back to the original graph\nDraw F1 inside and route F2 outside the square, so they no longer cross."
+  ];
+
+  node [
+    shape=circle,
+    fixedsize=true,
+    width=0.72,
+    height=0.72,
+    style=filled,
+    fillcolor="#f8fafc",
+    color="#0f172a",
+    penwidth=2.0,
+    fontname="Helvetica",
+    fontsize=18,
+    pin=true
+  ];
+
+  edge [penwidth=2.2, color="#475569", fontname="Helvetica", fontsize=16];
+
+  A [label="A", pos="0,220!"];
+  B [label="B", pos="220,220!"];
+  C [label="C", pos="220,0!"];
+  D [label="D", pos="0,0!"];
+
+  P1 [shape=point, width=0.01, height=0.01, label="", style=invis, pos="340,320!"];
+  P2 [shape=point, width=0.01, height=0.01, label="", style=invis, pos="-120,320!"];
+  P3 [shape=point, width=0.01, height=0.01, label="", style=invis, pos="-120,100!"];
+
+  A -- B;
+  B -- C;
+  C -- D;
+  D -- A;
+
+  A -- C [color="#16a34a", penwidth=3.8, fontcolor="#16a34a", label="F1 inside"];
+  B -- P1 [color="#7c3aed", penwidth=3.4];
+  P1 -- P2 [color="#7c3aed", penwidth=3.4];
+  P2 -- P3 [color="#7c3aed", penwidth=3.4];
+  P3 -- D [color="#7c3aed", penwidth=3.4];
+
+  outside_note [shape=plain, label="F2 routed outside", pos="125,-82!"];
+}
