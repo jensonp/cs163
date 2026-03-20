@@ -8,6 +8,7 @@ Each problem folder contains a `README.md` with a solution walkthrough and a fun
 - `ps8/problem1_shortest_residual_paths/`
   - Problem 1
   - Sequence of flows and residual graphs for augmenting on unweighted shortest residual paths
+  - Includes a tiny backward-edge example showing how residual paths undo a bad earlier choice
 
 - `ps8/problem2_widest_residual_paths/`
   - Problem 2

@@ -81,3 +81,5 @@ After this, there is no residual edge leaving `s`, so there is no residual path 
 - **Why the algorithm stops.** A flow is maximum exactly when there is no augmenting path left in the residual graph.
 
 - **Tie-breaking.** If several residual paths have the same smallest number of edges, any one of them is allowed. A different first choice can change the intermediate steps, but not the final maximum-flow value.
+
+For a tiny example where the algorithm must use a backward residual edge to undo a bad earlier choice, see [backward_edge_example/README.md](backward_edge_example/README.md).

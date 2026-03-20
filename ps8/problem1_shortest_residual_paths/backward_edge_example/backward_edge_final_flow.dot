@@ -1,0 +1,48 @@
+digraph G {
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=true,
+    outputorder=edgesfirst,
+    bgcolor="white",
+    pad=0.35,
+    labelloc=t,
+    fontsize=20,
+    fontname="Helvetica",
+    label="Step 3: final corrected maximum flow\nThe backward edge removed flow from a -> b and unlocked value 2."
+  ];
+
+  node [
+    shape=circle,
+    fixedsize=true,
+    width=0.76,
+    height=0.76,
+    style=filled,
+    fillcolor="#f8fafc",
+    color="#0f172a",
+    penwidth=2.0,
+    fontname="Helvetica",
+    fontsize=18,
+    pin=true
+  ];
+
+  edge [
+    color="#cbd5e1",
+    penwidth=2.0,
+    arrowsize=0.9,
+    fontname="Helvetica",
+    fontsize=16
+  ];
+
+  s [label="s", pos="0,110!"];
+  a [label="a", pos="170,220!"];
+  b [label="b", pos="170,0!"];
+  t [label="t", pos="340,110!"];
+
+  s -> a [label="1/1", color="#16a34a", fontcolor="#16a34a", penwidth=3.8];
+  s -> b [label="1/1", color="#16a34a", fontcolor="#16a34a", penwidth=3.8];
+  a -> b [label="0/1"];
+  a -> t [label="1/1", color="#16a34a", fontcolor="#16a34a", penwidth=3.8];
+  b -> t [label="1/1", color="#16a34a", fontcolor="#16a34a", penwidth=3.8];
+
+}
