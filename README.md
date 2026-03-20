@@ -53,7 +53,7 @@ This directory is organized by practice set and problem number.
 - `ps10/problem2_nonplanar_k33_subdivision/`
   - Problem 2
   - Nonplanar graph proved via a `K3,3` subdivision
-  - Includes the original graph, deleted edges, subdivision, and contracted `K3,3`
+  - Includes the original graph, deleted edges, subdivision, contracted `K3,3`, and a detailed step-by-step explanation
 
 - `ps10/problem3_k5_flaps_compatibility_graph/`
   - Problem 3
